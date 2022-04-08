@@ -1,18 +1,13 @@
 #include <stdio.h>
 #include <string.h>
-/* This code prints to standard output using put */
 
 /**
- * function_name - main
+ * main-function begins
  *
- * @parameterx: void
- * Description: nothing really
- * return: integer
+ * Return:function ends
  */
 int main(void)
 {
-	char some_string[] = "\"Programming is like building a multilingual puzzle";
-	
-	puts(some_string);
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }

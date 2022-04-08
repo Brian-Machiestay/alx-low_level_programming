@@ -2,7 +2,9 @@
 #include <string.h>
 
 /**
- * this function prints a string
+ *main-Function begins
+ *
+ *Return: Funtion ends
  */
 int main(void)
 {
