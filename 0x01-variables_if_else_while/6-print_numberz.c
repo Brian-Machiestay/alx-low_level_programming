@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <assert.h>
 /**
  *main-function begins
  *
@@ -6,13 +7,13 @@
  */
 int main(void)
 {
-	char alph[27] = "abcdefghijklmnopqrstuvwxyz\n";
+	char digits[11] = "0123456789";
 	int i = 0;
-
-	while(i < 27)
+	while (i < 10)
 	{
-		putchar(alph[i]);
+		putchar("%c", digits[i]);
 		i++;
 	}
+	putchar('\n');
 	return (0);
 }
