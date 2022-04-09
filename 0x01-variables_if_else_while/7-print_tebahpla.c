@@ -8,7 +8,7 @@ int main(void)
 {
 	char alph[27] = "zyxwvutsrqponmlkjihgfedcba\n";
 	int i = 0;
-	
+
 	while (i < 27)
 	{
 		putchar(alph[i]);
