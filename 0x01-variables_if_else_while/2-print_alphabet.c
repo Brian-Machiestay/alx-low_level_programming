@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	char alph[27] = "abcdefghijklmnopqrstuvwxyz";
+	char alph[27] = "abcdefghijklmnopqrstuvwxyz\n";
 	int i = 0;
 	
 	while (i < 27)
@@ -17,6 +17,5 @@ int main(void)
 		putchar(alph[i]);
 		i++;
 	}
-	putchar('\n');
 	return (0);
 }
