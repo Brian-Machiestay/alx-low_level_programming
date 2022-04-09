@@ -9,13 +9,10 @@ int main(void)
 	char alph[27] = "abcdfghijklmnoprstuvwxyz\n";
 	int i = 0;
 
-	while (i < 27)
+	while (i < 25)
 	{
-		if (alph[i] != 'e' || alph[i] != 'q')
-		{
 			putchar(alph[i]);
 			i++;
-		}
 	}
 	return (0);
 }
