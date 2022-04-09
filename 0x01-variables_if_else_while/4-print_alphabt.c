@@ -11,8 +11,8 @@ int main(void)
 
 	while (i < 25)
 	{
-			putchar(alph[i]);
-			i++;
+		putchar(alph[i]);
+		i++;
 	}
 	return (0);
 }
