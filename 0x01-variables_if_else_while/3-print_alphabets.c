@@ -13,7 +13,7 @@ int main(void)
 	char bigalph[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ\n";
 	int i = 0;
 	
-	while (i < 27)
+	while (i < 26)
 	{
 		putchar(alph[i]);
 		i++;
