@@ -1,0 +1,10 @@
+#include <stdio.h>
+/**
+ *main-Function begins
+ *
+ *Return: function ends
+ */
+int main(void)
+{
+	printf("0123456789\n");
+}
