@@ -1,18 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
 /**
- *main-Function begins here
+ *main-function begins
  *
- *Return:function ends
+ *Return: function ends
  */
 int main(void)
 {
 	char alph[27] = "abcdefghijklmnopqrstuvwxyz";
 	char bigalph[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ\n";
 	int i = 0;
-	
+
 	while (i < 26)
 	{
 		putchar(alph[i]);
