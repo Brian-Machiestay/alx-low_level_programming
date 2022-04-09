@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	char alph[27] = "abcdefghijklmnopqrstuvwxyz\n";
+	char alph[27] = "abcdefghijklmnopqrstuvwxyz";
 	int i = 0;
 	
 	while (i < 27)
