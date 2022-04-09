@@ -2,17 +2,17 @@
 /**
  *main-function
  *
- *Return
+ *Return: function ends
  */
 int main(void)
 {
 	int i = 0;
 	int j = 1;
 	int count = 1;
-	
-	for(i = 0; i < 9; i++)
+
+	for (i = 0; i < 9; i++)
 	{
-		for(; j <= 9; j++)
+		for (; j <= 9; j++)
 		{
 			putchar(i + '0');
 			putchar(j + '0');
