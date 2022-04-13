@@ -2,18 +2,6 @@
 #include "main.h"
 
 /**
- *main-function begins
- *
- *Return: function ends
- */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
-
-/**
  *print_alphabet-function begins
  *
  *Return:function ends
@@ -25,7 +13,7 @@ void print_alphabet(void)
 
 	while (i < 28)
 	{
-		putchar(alp[i]);
+		_putchar(alp[i]);
 		i++;
 	}
 }
