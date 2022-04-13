@@ -13,7 +13,7 @@ void print_alphabet(void)
 
 	while (i < 28)
 	{
-		_putchar(alp[i]);
+		putchar(alp[i]);
 		i++;
 	}
 }
