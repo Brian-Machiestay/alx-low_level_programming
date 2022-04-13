@@ -1,0 +1,26 @@
+#include <stdio.h>
+/**
+ *main-function begins
+ *
+ *Return: function ends
+ */
+void print_alphabet(void);
+
+int main (void)
+{
+	print_alphabet();
+	return (0);
+}
+
+void print_alphabet (void)
+{
+	char alp[28] = "abcdefghijklmnopqrstuvwxyz";
+	int i = 0;
+
+	while (i < 28)
+	{
+		putchar(i);
+		i++;
+	}
+	return;
+}
