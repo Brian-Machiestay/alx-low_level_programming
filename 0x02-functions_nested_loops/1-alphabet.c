@@ -1,11 +1,11 @@
 #include <stdio.h>
+#include "main.h"
+
 /**
  *main-function begins
  *
  *Return: function ends
  */
-void print_alphabet(void);
-
 int main(void)
 {
 	print_alphabet();
