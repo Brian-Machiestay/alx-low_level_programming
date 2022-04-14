@@ -16,7 +16,6 @@ void print_to_98(int n)
 	{
 		if (i > 9)
 		{
-			int thes[3] = i;
 			putchar(i / 10 + '0');
 			putchar(i % 10 + '0');
 		}
