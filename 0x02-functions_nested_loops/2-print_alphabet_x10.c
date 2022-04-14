@@ -1,17 +1,5 @@
 #include <stdio.h>
-/**
- *main-function begins
- *
- *Return:function ends
- */
-void print_alphabet_x10(void);
-
-int main(void)
-{
-	print_alphabet_x10();
-	return (0);
-}
-
+#include "main.h"
 /**
  *print_alphabet_x10-begins here
  *
