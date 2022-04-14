@@ -14,7 +14,16 @@ void print_to_98(int n)
 
 	for (i = n; i < 99; i++)
 	{
-		putchar (i + '0');
+		if (i > 9)
+		{
+			int thes[3] = i;
+			putchar(thes[0] + '0');
+			putchar(thes[1] + '0');
+		}
+		else
+		{
+			putchar (i + '0');
+		}
 		if (i != 98)
 		{
 			putchar (',');
