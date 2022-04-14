@@ -13,7 +13,7 @@ void print_alphabet_x10(void)
 
 	while (i < 10)
 	{
-		while (j < 28)
+		while (j < 27)
 		{
 			putchar(alp[j]);
 			j++;
