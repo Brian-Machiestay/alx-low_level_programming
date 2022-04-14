@@ -2,8 +2,8 @@
 #include <ctype.h>
 #include "main.h"
 /**
- * _isalpha - check the code.
- *@c: integer return type
+ * print_sign - check the code.
+ *@n: integer return type
  * Return: Always 0.
  */
 int print_sign(int n)
