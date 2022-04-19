@@ -1,27 +1,33 @@
 #include <stdio.h>
 #include <ctype.h>
-#include <stdlib.h>
-#include <limits.h>
 #include "main.h"
 /**
- *print_last_digit - check the code.
- *@n: integer return type
+ * times_table - check the code.
+ *
  * Return: Always 0.
  */
-int print_last_digit(int n)
+void times_table(void)
 {
-	int last;
+	int i;
+	int j;
+	int quo;
 
-	if (n < 0)
+	for (i = 0; i < 10; i++)
 	{
-		n = abs(n);
+		for (j = 0; j < 10; j++)
+		{
+			quo = i * j;
+
+			if (quo > 9)
+			{
+				_putchar(quo / 10 + '0');
+				_putchar(quo % 10 + '0');
+			}
+			else
+			{
+				_puchar(quo + '0');
+			}
+		}
+		_putchar('\n');
 	}
-	if (n == INT_MIN)
-	{
-		_putchar(8 + '0');
-		return (8);
-	}
-	last = n % 10;
-	_putchar(last + '0');
-	return (last);
 }
