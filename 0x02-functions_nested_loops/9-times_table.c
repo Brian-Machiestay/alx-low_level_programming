@@ -11,12 +11,14 @@ void times_table(void)
 	int i;
 	int j;
 	int quo;
+	int nextquo;
 
 	for (i = 0; i < 10; i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
 			quo = i * j;
+			nextquo = (j + 1) * i;
 
 			if (quo > 9)
 			{
@@ -27,11 +29,11 @@ void times_table(void)
 			{
 				_putchar(quo + '0');
 			}
-			if (quo < 10)
+			if (quo < 10 && nextquo < 10)
 			{
 				_putchar(',');
 				_putchar(' ');
-			        _putchar(' ');
+				_putchar(' ');
 			}
 			else
 			{
