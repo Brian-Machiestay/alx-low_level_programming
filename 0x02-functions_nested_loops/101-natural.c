@@ -8,7 +8,7 @@
  *Return: always 0
  */
 
-void main(void)
+int main(void)
 {
 	int n = 1024;
 	int count = 0;
@@ -22,4 +22,5 @@ void main(void)
 		}
 	}
 	printf("%d\n", count);
+	return (0);
 }
