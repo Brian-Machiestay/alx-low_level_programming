@@ -40,7 +40,7 @@ void print_times_table(int n)
 {
 	int i, j, quo, nextquo;
 
-	if (n < 15 && n > 0)
+	if (n < 15 && n >= 0)
 	{
 		for (i = 0; i < n + 1; i++)
 		{
@@ -50,21 +50,22 @@ void print_times_table(int n)
 				nextquo = (j + 1) * i;
 
 				number(quo);
-				if (nextquo < 10 && j != n)
+				if (nextquo < 10 && j != n && n != 0)
 				{
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
 					_putchar(' ');
 				}
-				else if (nextquo < 100 && j != n)
+				else if (nextquo < 100 && j != n && n != 0)
 				{
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
 				}
-				else if (nextquo > 99 && j != n)
+				else if (nextquo > 99 && j != n && n != 0)
 				{
+					_putchar(',');
 					_putchar(' ');
 				}
 			}
