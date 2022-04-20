@@ -29,18 +29,18 @@ void times_table(void)
 			{
 				_putchar(quo + '0');
 			}
-			if (quo < 10 && nextquo < 10)
+			if (quo < 10 && nextquo < 10 && j != 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
 			}
-			else
+			else if (quo > 9 && nextquo > 9 && j != 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
