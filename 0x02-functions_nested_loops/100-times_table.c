@@ -50,20 +50,20 @@ void print_times_table(int n)
 				nextquo = (j + 1) * i;
 
 				number(quo);
-				if (nextquo < 10 && j != 9)
+				if (nextquo < 10 && j != n)
 				{
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
 					_putchar(' ');
 				}
-				else if (nextquo > 9 && nextquo < 100 && j != 9)
+				else if (nextquo < 100 && j != n)
 				{
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
 				}
-				else if (nextquo > 100 && j != 9)
+				else if (nextquo > 99 && j != n)
 				{
 					_putchar(' ');
 				}
