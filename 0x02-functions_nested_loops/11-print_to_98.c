@@ -4,31 +4,39 @@
 #include <limits.h>
 #include "main.h"
 /**
- *void print_to_98 - check the code.
+ *print_to_98 - check the code.
+ *
  *@n: integer return type
+ *
  * Return: Always 0.
  */
 void print_to_98(int n)
 {
 	int i;
 
-	for (i = n; i < 99; i++)
+	if (n < 99)
 	{
-		if (i > 9)
+		for (i = n; i < 99; i++)
 		{
-			putchar(i / 10 + '0');
-			putchar(i % 10 + '0');
-		}
-		else
-		{
-			putchar (i + '0');
-		}
-		if (i != 98)
-		{
-			putchar (',');
-			putchar (' ');
-			putchar (' ');
+			printf("%d", i);
+
+			if (i != 98)
+			{
+				printf(", ");
+			}
 		}
 	}
-	putchar('\n');
+
+	else
+	{
+		for (i = n; i > 97; i--)
+		{
+			printf("%d", i);
+
+			if (i != 98)
+			{
+				printf(", ");
+			}
+		}
+	}
 }
