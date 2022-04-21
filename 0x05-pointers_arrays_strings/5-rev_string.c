@@ -13,7 +13,7 @@ void rev_string(char *s)
 	int loopcnt = (size - 1) / 2;
 	int i;
 
-	for (i = 0; i < loopcnt && size > 0; i++, size--)
+	for (i = 0; i <= loopcnt && size > 0; i++, size--)
 	{
 		char c = *(s + i);
 		*(s + i) = *(s + (size - 1));
