@@ -9,7 +9,6 @@
  */
 void print_rev(char *s)
 {
-	char c = *s;
 	int i;
 	int size = strlen(s);
 
