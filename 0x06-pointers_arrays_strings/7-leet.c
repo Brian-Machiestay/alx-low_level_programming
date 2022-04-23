@@ -14,7 +14,7 @@ char *leet(char *a)
 	char *toencode = "aBeEoOtTlL";
 	char *encode = "4433007711";
 
-	for (i = 0; i < size && size >= 1; i++)
+	for (i = 0; i < size; i++)
 	{
 		char m = *(a + i);
 
