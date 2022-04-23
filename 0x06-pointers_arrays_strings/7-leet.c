@@ -22,6 +22,7 @@ char *leet(char *a)
 			if (m == *(toencode + j))
 			{
 				*(a + i) = *(encode + j);
+				break;
 			}
 		}
 	}
