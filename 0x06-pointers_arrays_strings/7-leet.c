@@ -12,18 +12,19 @@ char *leet(char *a)
 {
 	int i;
 	int j;
-	char toencode[] = "aBeEoOtTlL";
-	char encode[] = "4433007711";
+	int size = strlen(a);
+	char *toencode = "aAeEoOtTlL";
+	char *encode = "4433007711";
 
-	for (i = 0; a[i]; i++)
+	for(i = 0; i < size; i++)
 	{
+		char m = *(a + i);
 
 		for (j = 0; j < 10; j++)
 		{
-			if (a[i] == toencode[j])
+			if (m == *(toencode + j))
 			{
-				a[i] = encode[j];
-				break;
+				*(a + i) = *(encode + j);
 			}
 		}
 	}
