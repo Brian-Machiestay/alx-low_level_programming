@@ -16,7 +16,7 @@ char *rot13(char *a)
 	int size = strlen(a);
 
 	strcat(alph, bigalph);
-	for (i = 0; i < size; i++)
+	for (i = 0; i < size && size > 0; i++)
 	{
 		char m = *(a + i);
 
