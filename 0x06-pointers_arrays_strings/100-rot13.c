@@ -20,7 +20,7 @@ char *rot13(char *a)
 	{
 		char m = *(a + i);
 
-		for (j = 0; j < 104; j++ )
+		for (j = 0; j < 104; j++)
 		{
 			if (m == *(alph + j))
 			{
