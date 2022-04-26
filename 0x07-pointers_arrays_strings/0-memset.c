@@ -15,5 +15,5 @@ char *_memset(char *s, char b, unsigned int n)
 {
 	int c = toascii(b);
 
-	return memset(s, c, n);
+	return (memset(s, c, n));
 }
