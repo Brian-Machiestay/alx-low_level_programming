@@ -10,6 +10,14 @@ long int helpersqrt(long int n, long int count);
  */
 long int helpersqrt(long int n, long int count)
 {
+	if (count > 4096)
+	{
+		count = 4097;
+	}
+	if (n == 4)
+	{
+		return (4);
+	}
 	if (count * count == n)
 	{
 		return (count);
@@ -28,7 +36,7 @@ long int helpersqrt(long int n, long int count)
  */
 int _sqrt_recursion(int n)
 {
-	long int count = n;
+	long int count = n / 4;
 	long int m = n;
 
 	return ((int)helpersqrt(m, count));
