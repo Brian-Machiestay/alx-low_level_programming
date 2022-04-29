@@ -1,14 +1,14 @@
 #include "main.h"
 #include <stdio.h>
 
-int helpersqrt(int n, int count);
+long int helpersqrt(long int n, long int count);
 /**
  * helpersqrt - check the code
  * @n: an integer
  * @count: an integer
  * Return: square root
  */
-int helpersqrt(int n, int count)
+long int helpersqrt(long int n, long int count)
 {
 	if (count * count == n)
 	{
@@ -28,5 +28,8 @@ int helpersqrt(int n, int count)
  */
 int _sqrt_recursion(int n)
 {
-	return (helpersqrt(n, n));
+	long int count = n;
+	long int m = n;
+
+	return ((int)helpersqrt(m, count));
 }
