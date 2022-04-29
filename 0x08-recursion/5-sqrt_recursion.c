@@ -10,6 +10,10 @@ long int helpersqrt(long int n, long int count);
  */
 long int helpersqrt(long int n, long int count)
 {
+	if (n == 1)
+	{
+		return (1);
+	}
 	if (count > 4096)
 	{
 		count = 4097;
