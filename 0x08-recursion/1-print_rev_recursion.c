@@ -10,6 +10,10 @@ void _recurse(char *s, int n);
  */
 void _recurse(char *s, int n)
 {
+	if (strlen(s) == 0)
+	{
+		return;
+	}
 	putchar(*(s + n));
 	--n;
 	if (n >= 0)
