@@ -8,6 +8,7 @@ int _recurse(char *s, int n, int m);
  *@s: a pointer
  *@n: an int
  *@m: an int
+ *Return: an integer
  */
 int _recurse(char *s, int n, int m)
 {
@@ -24,12 +25,13 @@ int _recurse(char *s, int n, int m)
 	{
 		return (0);
 	}
-	return _recurse(s, n, m);
+	return (_recurse(s, n, m));
 }
 
 /**
  * is_palindrome - check the code
  * @s: a pointer
+ * Return: an integer
  */
 int is_palindrome(char *s)
 {
