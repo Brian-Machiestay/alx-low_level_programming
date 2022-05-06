@@ -10,13 +10,23 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int s1size = strlen(s1);
-	int s2size = strlen(s2);
-	int n = s1size + s2size + 1;
-	char *memory = malloc(sizeof(char) * n);
+	int s1size;
+	int s2size;
+	int n;
+	char *memory;
 	int i = 0;
 	int j;
 
+	if (s1 != NULL)
+		s1size = strlen(s1);
+	else
+		s1size = 0;
+	if (s2 != NULL)
+		s2size = strlen(s2);
+	else
+		s2size = 0;
+	n = s1size + s2size + 1;
+	memory = malloc(sizeof(char) * n);
 	if (memory == NULL)
 	{
 		return (NULL);
@@ -30,7 +40,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s2 != NULL)
 	{
-		for (j = 0; i < n; i++, j++)
+		for (j = 0; j < s2size; i++, j++)
 		{
 			*(memory + i) = *(s2 + j);
 		}
