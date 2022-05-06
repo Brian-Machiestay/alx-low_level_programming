@@ -14,9 +14,20 @@ char *create_array(unsigned int size, char c)
 	char *allocated = malloc(memory);
 	unsigned int i;
 
-	for (i = 0; i < memory; i++)
+	if (size == 0)
 	{
-		allocated[i] = c;
+		return (NULL);
+	}
+	if (allocated == NULL)
+	{
+		return (NULL);
+	}
+	else
+	{
+		for (i = 0; i < memory; i++)
+		{
+			allocated[i] = c;
+		}
 	}
 	return (allocated);
 }
