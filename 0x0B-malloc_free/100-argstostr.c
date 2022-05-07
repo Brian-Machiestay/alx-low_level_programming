@@ -18,12 +18,12 @@ char *argstostr(int ac, char **av)
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	for (i = 1; i < j; i++)
+	for (i = 0; i < j; i++)
 	{
 		strglen += strlen(av[i]);
 	}
 
-	all_args = allargs = (char *)malloc(strglen + ac);
+	all_args = allargs = (char *)malloc(strglen + ac - 1);
 	if (all_args == NULL)
 		return (NULL);
 
@@ -33,6 +33,5 @@ char *argstostr(int ac, char **av)
 		all_args += strlen(av[i]) + 1;
 		*(all_args - 1) = '\n';
 	}
-	*(all_args - 1) = '\n';
 	return (allargs);
 }
