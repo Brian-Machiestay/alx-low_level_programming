@@ -23,7 +23,7 @@ char *argstostr(int ac, char **av)
 		strglen += strlen(av[i]);
 	}
 
-	all_args = allargs = (char *)malloc(strglen + ac - 1);
+	all_args = allargs = (char *)malloc(strglen + ac);
 	if (all_args == NULL)
 		return (NULL);
 
