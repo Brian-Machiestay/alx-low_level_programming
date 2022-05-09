@@ -30,7 +30,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2size >= toprint)
 		s2size = toprint;
 	m = s1size + s2size;
-	memory = malloc(sizeof(char) * m + 1);
+	memory = malloc(sizeof(char) * m);
 	if (memory == NULL)
 	{
 		return (NULL);
