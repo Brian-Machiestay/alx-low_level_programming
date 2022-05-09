@@ -12,24 +12,45 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int s1size;
-	int s2size = n;
-	char *new_string;
-	int total;
+	int s2size;
+	int toprint = (int)n;
+	int m;
+	char *memory;
+	int i = 0;
+	int j;
 
-	s1size = strlen(s1);
-	if (s2 == NULL)
-	{
-		s2size = 0;
-	}
-	else if (n >= strlen(s2))
+	if (s1 != NULL)
+		s1size = strlen(s1);
+	else
+		s1size = 0;
+	if (s2 != NULL)
 		s2size = strlen(s2);
-	total = s1size + s2size;
-	new_string = malloc(sizeof(char) * total + 1);
-	if (new_string == NULL)
+	else
+		s2size = 0;
+	if (s2size >= toprint)
+		s2size = toprint;
+	m = s1size + s2size;
+	memory = malloc(sizeof(char) * m + 1);
+	if (memory == NULL)
+	{
 		return (NULL);
-	new_string = strcat(new_string, s1);
-	if (s2size == 0)
-		return (new_string);
-	new_string = strncat(new_string, s2, n);
-	return (new_string);
+	}
+	if (s1 != NULL)
+	{
+		for (i = 0; i < s1size; i++)
+		{
+			*(memory + i) = *(s1 + i);
+		}
+	}
+	if (s2 != NULL)
+	{
+		for (j = 0; j < toprint; i++, j++)
+		{
+			*(memory + i) = *(s2 + j);
+			if (j >= s2size)
+				break;
+		}
+	}
+	*(memory + m) = '\0';
+	return (memory);
 }
