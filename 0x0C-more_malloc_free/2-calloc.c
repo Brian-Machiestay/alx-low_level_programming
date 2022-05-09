@@ -17,6 +17,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 	arraymem = malloc(nmemb * size);
+	arraymem = memset(arraymem, 0, nmemb * size);
 	if (arraymem == NULL)
 		return (NULL);
 	return (arraymem);
