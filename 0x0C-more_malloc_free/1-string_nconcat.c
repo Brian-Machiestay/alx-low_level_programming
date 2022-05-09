@@ -2,9 +2,25 @@
 #include <stdlib.h>
 #include <string.h>
 
+int memory(char *mem);
+/**
+ * memo - return a space
+ * @mem: a pointer param
+ * Return: an integer.
+ */
+int memo(char *mem)
+{
+	int size;
+
+	if (mem != NULL)
+		size = strlen(mem);
+	else
+		size = 0;
+	return (size);
+}
 /**
  * string_nconcat - return a space
- * @s1: a pointer param
+ * @s1: a pointer param*
  * @s2: another pointer param
  * @n: an integer param
  * Return: a pointer.
@@ -19,18 +35,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int i = 0;
 	int j;
 
-	if (s1 != NULL)
-		s1size = strlen(s1);
-	else
-		s1size = 0;
-	if (s2 != NULL)
-		s2size = strlen(s2);
-	else
-		s2size = 0;
+	s1size = memo(s1);
+	s2size = memo(s2);
 	if (s2size >= toprint)
 		s2size = toprint;
 	m = s1size + s2size;
-	memory = malloc(sizeof(char) * m);
+	memory = malloc(sizeof(char) * m + 1);
 	if (memory == NULL)
 	{
 		return (NULL);
