@@ -3,5 +3,5 @@
 #ifndef STDLIB_H
 #include <stdlib.h>
 #endif /* STDLIB_H */
-#define ABS(x) labs(x)
+#define ABS(x) abs(x)
 #endif /* FUNCTION_LIKE_MACRO_H */
