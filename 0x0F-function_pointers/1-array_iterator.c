@@ -2,9 +2,10 @@
 #include "function_pointers.h"
 
 /**
- * print_elem - prints an integer
- * @elem: the integer to print
- *
+ * array_iterator - prints an integer
+ * @array: an array of integers
+ * @size: the size of the array
+ * @action: a function pointer
  * Return: Nothing.
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
