@@ -22,7 +22,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		i = va_arg(list, int);
 		if (!i)
+		{
 			printf("(nil)");
+			va_arg(samelist, int);
+		}
 		else
 		{
 			vprintf("%s", samelist);
