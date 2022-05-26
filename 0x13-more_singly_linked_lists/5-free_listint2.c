@@ -23,6 +23,6 @@ void free_listint2(listint_t **head)
 		free(myh);
 		myh = nestmyh;
 	}
-	*head = NULL;
-	head = NULL;
+	if (head != NULL)
+		*head = NULL;
 }
