@@ -7,7 +7,7 @@
  * free_listint2 - check the code
  * @head: the list
  */
-void free_listint2(__attribute__((unused))listint_t **head)
+void free_listint2(listint_t **head)
 {
 	listint_t *myh = *head;
 	listint_t *nestmyh = NULL;
