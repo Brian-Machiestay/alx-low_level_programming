@@ -2,27 +2,23 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
+
+
 /**
- * atone - check the code
- * @head: the list
- * @n: the integer to a node
- * @myh: the current node
- * Return: Always 0.
+ * new_Node - returns a new node
+ * @n: the integer data
+ * Return: a new node
  */
-listint_t *atone(listint_t **head, listint_t *myh, int n)
+listint_t *new_Node(int n)
 {
 	listint_t *newNode;
-	listint_t *temp;
 
 	newNode = malloc(sizeof(listint_t));
 	if (newNode == NULL)
 		return (NULL);
 	newNode->n = n;
 	newNode->next = NULL;
-	temp = myh->next;
-	myh->next = newNode;
-	newNode->next = temp;
-	return (*head);
+	return (newNode);
 }
 /**
  * add_nodeint - check the code
@@ -55,20 +51,42 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int count = 0;
 	listint_t *myh = *head;
+	listint_t *previous = *head;
+	listint_t *newNode;
 
+	newNode = new_Node(n);
+	if (newNode == NULL)
+		return (NULL);
 	if (myh != NULL)
 	{
 		if (count == idx)
 		{
 			return (add_nodeint(head, n));
 		}
+		previous = myh;
+		myh = myh->next;
+		count++;
 	}
-	while (myh != NULL)
+	while (myh != NULL && myh != *head)
 	{
-		if (count + 1 == idx)
-			return (atone(head, myh, n));
+		if (count == idx)
+		{
+			previous->next = newNode;
+			newNode->next = myh;
+			return (*head);
+		}
+		previous = myh;
 		count++;
 		myh = myh->next;
 	}
-	return (NULL);
+	if (count == idx)
+	{
+		previous->next = newNode;
+		return (*head);
+	}
+	else
+	{
+		free(newNode);
+		return (NULL);
+	}
 }
