@@ -3,43 +3,6 @@
 #include <stdio.h>
 #include "lists.h"
 
-
-/**
- * new_Node - returns a new node
- * @n: the integer data
- * Return: a new node
- */
-listint_t *new_Node(int n)
-{
-	listint_t *newNode;
-
-	newNode = malloc(sizeof(listint_t));
-	if (newNode == NULL)
-		return (NULL);
-	newNode->n = n;
-	newNode->next = NULL;
-	return (newNode);
-}
-/**
- * add_nodeint - check the code
- * @head: the list
- * @n: the string node to insert
- * Return: the list.
- */
-listint_t *add_nodeint(listint_t **head, const int n)
-{
-	listint_t *newNode;
-
-	newNode = malloc(sizeof(listint_t));
-	if (newNode == NULL)
-		return (NULL);
-
-	newNode->n = n;
-	newNode->next = *head;
-	*head = newNode;
-	return (newNode);
-}
-
 /**
  * insert_nodeint_at_index - check the code
  * @head: the list
@@ -50,40 +13,38 @@ listint_t *add_nodeint(listint_t **head, const int n)
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int count = 0;
-	listint_t *myh = *head;
-	listint_t *previous = *head;
+	listint_t *temp = *head;
+	listint_t *next = *head;
 	listint_t *newNode;
 
-	newNode = new_Node(n);
+	newNode = malloc(sizeof(listint_t));
+	newNode->n = n;
+	newNode->next = NULL;
 	if (newNode == NULL)
 		return (NULL);
-	if (myh != NULL)
+	if (idx == 0 && *head == NULL)
 	{
-		if (count == idx)
-		{
-			return (add_nodeint(head, n));
-		}
-		previous = myh;
-		myh = myh->next;
-		count++;
-	}
-	while (myh != NULL)
-	{
-		if (count == idx)
-		{
-			previous->next = newNode;
-			newNode->next = myh;
-			return (newNode);
-		}
-		previous = myh;
-		count++;
-		myh = myh->next;
-	}
-	if (count == idx)
-	{
-		previous->next = newNode;
+		*head = newNode;
 		return (newNode);
 	}
-	free(newNode);
+	else if (idx == 0 && *head != NULL)
+	{
+		newNode->next = *head;
+		*head = newNode;
+		return (newNode);
+	}
+	count++;
+	while (next != NULL)
+	{
+		if (count == idx)
+		{
+			temp = (next)->next;
+			(next)->next = newNode;
+			newNode->next = temp;
+			return (newNode);
+		}
+		next = next->next;
+		count++;
+	}
 	return (NULL);
 }
