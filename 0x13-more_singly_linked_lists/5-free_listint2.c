@@ -25,7 +25,6 @@ void free_listint2(listint_t **head)
 		free(myh);
 		myh = nestmyh;
 	}
-	if (head != NULL)
-		*head = NULL;
+	*head = NULL;
 	head = NULL;
 }
