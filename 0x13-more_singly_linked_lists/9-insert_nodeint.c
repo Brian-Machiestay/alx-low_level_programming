@@ -79,14 +79,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		count++;
 		myh = myh->next;
 	}
-	if (count == idx)
+	/* if (count == idx)
 	{
 		previous->next = newNode;
 		return (newNode);
 	}
-	else
-	{
-		free(newNode);
-		return (NULL);
-	}
+	*/
+	free(newNode);
+	return (NULL);
 }
