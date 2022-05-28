@@ -17,6 +17,8 @@ void free_listint2(listint_t **head)
 		myh = myh->next;
 		free(*head);
 	}
+	else
+		return;
 	while (myh != *head && myh != NULL)
 	{
 		nestmyh = myh->next;
