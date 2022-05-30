@@ -17,6 +17,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t fides;
 	ssize_t refile;
 	ssize_t let = (ssize_t)letters;
+	int readit;
 
 	buf = malloc(letters);
 	if (buf == NULL)
@@ -27,7 +28,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fides = open(filename, O_RDONLY);
 	if (fides < 0)
 		return (0);
-	read(fides, buf, letters);
+	readit = read(fides, buf, letters);
+	if (readit < 0)
+		return (0);
 
 	refile = write(1, buf, letters);
 
