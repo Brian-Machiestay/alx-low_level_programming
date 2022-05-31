@@ -54,7 +54,7 @@ void checkclose(int c, int fd)
 	if (c < 0)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", fd);
-		exit(0);
+		exit(100);
 	}
 }
 
