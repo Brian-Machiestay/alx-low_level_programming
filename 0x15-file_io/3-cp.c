@@ -53,7 +53,7 @@ void checkclose(int c, int fd)
 {
 	if (c < 0)
 	{
-		dprintf(2, "Error: Can't close %d", fd);
+		dprintf(2, "Error: Can't close %d\n", fd);
 		exit(0);
 	}
 }
