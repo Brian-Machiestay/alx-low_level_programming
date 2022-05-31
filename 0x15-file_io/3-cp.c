@@ -90,7 +90,7 @@ int main(int ac, char **av)
 	checkfileto(fw, av);
 	while (fr > 0)
 	{
-		fr = read(fd, buf, 1024);
+		fr = read(fd, buf, 1023);
 		fw = write(fd1, buf, fr);
 	}
 	closev1 = close(fd);
