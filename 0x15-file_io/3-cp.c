@@ -80,7 +80,7 @@ int main(int ac, char **av)
 		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	fd1 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, perm);
+	fd1 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, perm);
 	checkfileto(fd1, av);
 	fd = open(av[1], O_RDONLY);
 	checkfilefrom(fd, av);
