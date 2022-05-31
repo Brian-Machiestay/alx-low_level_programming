@@ -84,7 +84,7 @@ int main(int ac, char **av)
 	checkfileto(fd1, av);
 	fd = open(av[1], O_RDONLY);
 	checkfilefrom(fd, av);
-	fr = read(fd, buf, 1024);
+	fr = read(fd, buf, 1023);
 	checkfilefrom(fr, av);
 	fw = write(fd1, buf, fr);
 	checkfileto(fw, av);
