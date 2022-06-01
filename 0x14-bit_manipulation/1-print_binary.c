@@ -12,6 +12,8 @@ void print_binary(unsigned long int n)
 	int count = 31;
 	int temp = 0;
 
+	if (n > 4294967295)
+		return;
 	if (n == 0)
 		putchar('0');
 
