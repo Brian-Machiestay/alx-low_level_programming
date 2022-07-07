@@ -32,7 +32,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			temp->next = myh->next;
 			(myh->next)->prev = temp;
 			free(myh);
-			printf("right here\n");
 			return (1);
 		}
 		temp = myh;
