@@ -10,7 +10,8 @@ void print_sub(int *array, int lo, int hi)
 {
 	int i;
 
-	printf("Searching in array: ");
+	if (lo <= hi)
+		printf("Searching in array: ");
 	for (i = lo; i <= hi; i++)
 	{
 		printf("%d", array[i]);
@@ -40,7 +41,7 @@ int binary_search(int *array, size_t size, int value)
 	hi = size - 1;
 	m = 0;
 	print_sub(array, lo, hi);
-	while (lo < hi)
+	while (lo <= hi)
 	{
 		m = (lo + hi);
 		if (m % 2 != 0)
