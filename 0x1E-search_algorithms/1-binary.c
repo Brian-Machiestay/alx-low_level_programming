@@ -4,15 +4,16 @@
  * print_sub - print the subarray being searched
  * @lo: the least index
  * @hi: the highest index
+ * @array: the sub-array to print
  */
-void print_sub(int lo, int hi)
+void print_sub(int *array, int lo, int hi)
 {
 	int i;
 
 	printf("Searching in array: ");
 	for (i = lo; i <= hi; i++)
 	{
-		printf("%d", i);
+		printf("%d", array[i]);
 		if (i != hi)
 			printf(", ");
 		else if (i == hi)
@@ -38,7 +39,7 @@ int binary_search(int *array, size_t size, int value)
 	lo = 0;
 	hi = size - 1;
 	m = 0;
-	print_sub(lo, hi);
+	print_sub(array, lo, hi);
 	while (lo < hi)
 	{
 		m = (lo + hi);
@@ -52,7 +53,7 @@ int binary_search(int *array, size_t size, int value)
 			hi = m - 1;
 		else
 			return (m);
-		print_sub(lo, hi);
+		print_sub(array, lo, hi);
 	}
 	return (-1);
 }
