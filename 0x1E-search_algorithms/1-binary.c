@@ -14,7 +14,7 @@ void print_sub(int lo, int hi)
 	{
 		printf("%d", i);
 		if (i != hi)
-			printf(" ");
+			printf(", ");
 		else if (i == hi)
 			printf("\n");
 	}
