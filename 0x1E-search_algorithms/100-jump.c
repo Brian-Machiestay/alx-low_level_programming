@@ -4,7 +4,7 @@
  * jump_search - the jump search algorithm
  * @array: the array to search
  * @size: the size of the array
- * @vlaue: the value whose index to search
+ * @value: the value whose index to search
  * Return: index if found -1 otherwise
  */
 int jump_search(int *array, size_t size, int value)
