@@ -13,6 +13,8 @@ int interpolation_search(int *arr, size_t size, int va)
 	int lo = 0;
 	int pos;
 
+	if (!arr)
+		return (-1);
 	pos = lo + (((double)(hi - lo) / (arr[hi] - arr[lo])) *
 		    (va - arr[lo]));
 	if (pos > (int)size - 1)
