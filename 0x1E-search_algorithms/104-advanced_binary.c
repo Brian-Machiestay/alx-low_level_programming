@@ -51,7 +51,8 @@ int advanced_bi(int *arr, int hi, int lo, int va, int *index)
 	if (arr[m] == va)
 	{
 		*index = m;
-		advanced_bi(arr, m, lo, va, index);
+		if (m - 1 > 0 && arr[m - 1] == va)
+			advanced_bi(arr, m, lo, va, index);
 		if (*index > 0)
 			return (*index);
 		return (m);
