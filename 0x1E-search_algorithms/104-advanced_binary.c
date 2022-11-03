@@ -37,7 +37,7 @@ int advanced_bi(int *arr, int hi, int lo, int va, int *index)
 	int idx;
 
 	print_sub(arr, lo, hi);
-	if (lo >= hi)
+	if (lo > hi)
 		return (-1);
 	m = (lo + hi);
 	if (m % 2 != 0)
